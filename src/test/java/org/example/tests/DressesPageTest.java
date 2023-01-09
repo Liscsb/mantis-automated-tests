@@ -23,7 +23,7 @@ public class DressesPageTest {
     }
 
     @Test
-    void test() {
+    void whenProductsWomanDresses() {
         // when
         this.dressesPage.viewWomanDressesPage();
         // then

@@ -22,7 +22,7 @@ public class LoginPageTest {
     }
 
     @Test
-    void test() {
+    void whenSignInSuccess() {
         // when
         this.loginPage.signIn();
         // then
