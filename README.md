@@ -94,8 +94,13 @@ mvn clean install
 
 ## Executando os testes
 
-1. Para executar os testes, vá até o arquivo RunTests.java e execute-o.
-2. Os relatórios gerados estarão disponíveis na pasta test-output gerada após a execução. Para fácil entendimento, procure pelo arquivo emailable-report.
+1. Antes de executar os testes, note que as informações de Usuário e Senha são sensíveis e estão protegidas. Portanto, será necessário setar os seus valores nas variáveis de ambiente conforme exemplo a seguir:
+
+  MANTIS_USERNAME = <your_username>
+  MANTIS_PASSWORD = <your_password>
+
+2. Feito isso, vá até o arquivo RunTests.java e execute-o.
+3. Os relatórios gerados estarão disponíveis na pasta test-output gerada após a execução. Para fácil entendimento, procure pelo arquivo emailable-report.
 
 ## Licença
 
