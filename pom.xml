@@ -58,7 +58,14 @@
             <artifactId>testng</artifactId>
             <version>7.9.0</version>
         </dependency>
-    
+
+        <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>reportng</artifactId>
+                <version>1.2.2</version>
+                <scope>test</scope>
+        </dependency>
+            
         <!-- Testing dependencies-->
 
         <dependency>
@@ -133,7 +140,7 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/java/mantis/resources/runtests.xml</suiteXmlFile>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

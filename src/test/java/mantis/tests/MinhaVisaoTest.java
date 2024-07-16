@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import mantis.pages.LoginPage;
 import mantis.pages.MinhaVisaoPage;
+import mantis.pages.TarefaPage;
 import mantis.utils.Sidebar;
 
 public class MinhaVisaoTest extends BaseTest {
@@ -18,6 +19,7 @@ public class MinhaVisaoTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         MinhaVisaoPage minhaVisaoPage = new MinhaVisaoPage(driver);
         Sidebar sidebar = new Sidebar(driver);
+        TarefaPage tarefaPage = new TarefaPage(driver);
 
         Properties properties = new Properties();
         String resourceName = "/config-test.properties"; // caminho relativo ao classpath de teste
@@ -41,7 +43,7 @@ public class MinhaVisaoTest extends BaseTest {
         loginPage.clickEntrar();
         minhaVisaoPage.validaTituloDaPaginaMinhaVisao();
         sidebar.criarTarefa();
-        
+        tarefaPage.aguardarTarefaCarregar();
         
     }
 }
