@@ -5,13 +5,10 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-
-import mantis.pages.CriarTarefaPage;
 import mantis.pages.LoginPage;
 import mantis.pages.MinhaVisaoPage;
 import mantis.pages.TarefaPage;
 import mantis.utils.AssertionHelper;
-import mantis.utils.Sidebar;
 
 public class TarefaTest extends BaseTest {
     
@@ -22,13 +19,11 @@ public class TarefaTest extends BaseTest {
             
         LoginPage loginPage = new LoginPage(driver);
         MinhaVisaoPage minhaVisaoPage = new MinhaVisaoPage(driver);
-        CriarTarefaPage criarTarefaPage = new CriarTarefaPage(driver);
-        Sidebar sidebar = new Sidebar(driver);
         AssertionHelper assertionHelper = new AssertionHelper(driver);
         TarefaPage tarefaPage = new TarefaPage(driver);
 
         Properties properties = new Properties();
-        String resourceName = "/config-test.properties"; // caminho relativo ao classpath de teste
+        String resourceName = "/config-test.properties";
 
         // Carregar o arquivo usando ClassLoader
         try (InputStream inputStream = LoginTest.class.getResourceAsStream(resourceName)) {
@@ -39,8 +34,9 @@ public class TarefaTest extends BaseTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        String username = properties.getProperty("login.username");
-        String password = properties.getProperty("login.password");
+
+        String username = properties.getProperty("username");
+        String password = properties.getProperty("password");
 
         loginPage.enterUsername(username);
         loginPage.clickEntrar();

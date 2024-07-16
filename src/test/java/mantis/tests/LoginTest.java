@@ -31,8 +31,8 @@ public class LoginTest extends BaseTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        String username = properties.getProperty("login.username");
-        String password = properties.getProperty("login.password");
+        String username = properties.getProperty("username");
+        String password = properties.getProperty("password");
 
         loginPage.enterUsername(username);
         loginPage.clickEntrar();
