@@ -19,17 +19,25 @@ Este projeto é uma suite de testes automatizados para a ferramenta Mantis, util
 
 O projeto está organizado da seguinte forma:
 
-mantis-automated-tests/
-├── src/
-│   └── test/
-│       └── java/
-│           └── mantis/
-│               ├── pages/
-│               ├── elements/
-│               ├── test/
-│               ├── utils/
-│       └── resources/
-└── pom.xml
+         ├── src/
+
+            └── test/
+           
+               └── java/
+        
+                   └── mantis/
+        
+                       ├── pages/
+        
+                       ├── elements/
+        
+                       ├── test/
+        
+                       ├── utils/
+        
+               └── resources/
+
+         └── pom.xml
 
 - [pages] Contém as classes que representam as páginas do Mantis.
 - [elements] Contém as classes que encapsulam os elementos das páginas.
